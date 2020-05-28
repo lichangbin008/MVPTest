@@ -43,8 +43,6 @@ public interface IRegisterContract {
          * @param pwd
          */
         void requestRegister(String name, String pwd) throws Exception;
-
-
     }
 
     IView emptyView = new IView() {

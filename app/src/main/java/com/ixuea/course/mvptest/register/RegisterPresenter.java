@@ -28,7 +28,11 @@ public class RegisterPresenter extends BaseMvpPresenter<IRegisterContract.IView,
 
     @Override
     public void requestRegister(String name, String pwd) {
-        mModel.requestRegister(name,pwd);
+        try {
+            mModel.requestRegister(name,pwd);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

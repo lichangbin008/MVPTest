@@ -13,7 +13,7 @@ public class RegisterModel extends BaseModel<RegisterPresenter> implements IRegi
     }
 
     @Override
-    public void requestRegister(String name, String pwd) {
+    public void requestRegister(String name, String pwd) throws Exception {
         //请求服务登录接口，然后拿到服务器返回的JSON数据
         if ("abc".equals(name) && "123".equals(pwd)) {
             mPresenter.responseRegister(true);
@@ -21,6 +21,5 @@ public class RegisterModel extends BaseModel<RegisterPresenter> implements IRegi
             mPresenter.responseRegister(false);
         }
     }
-
 
 }
