@@ -1,11 +1,12 @@
 package com.ixuea.course.mvptest.register;
 
+import com.ixuea.course.mvptest.mvp.IMvpModel;
 import com.ixuea.course.mvptest.mvp.base.BaseMvpPresenter;
 
 /**
  * 注册P层
  */
-public class RegisterPresenter extends BaseMvpPresenter<IRegisterContract.IView, RegisterModel> implements IRegisterContract.IPresenter {
+public class RegisterPresenter extends BaseMvpPresenter<IRegisterContract.IView> implements IRegisterContract.IPresenter, IMvpModel<RegisterModel> {
 
     /**
      * 构造方法
@@ -29,7 +30,7 @@ public class RegisterPresenter extends BaseMvpPresenter<IRegisterContract.IView,
     @Override
     public void requestRegister(String name, String pwd) {
         try {
-            mModel.requestRegister(name,pwd);
+            getModelInstance().requestRegister(name,pwd);
         } catch (Exception e) {
             e.printStackTrace();
         }

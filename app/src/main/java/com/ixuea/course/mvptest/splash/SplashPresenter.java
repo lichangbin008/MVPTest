@@ -9,7 +9,7 @@ import com.ixuea.course.mvptest.mvp.model.BaseModel;
 /**
  * 闪屏页P层
  */
-public class SplashPresenter extends BaseMvpPresenter<ISplashContract.IView,SplashModel> implements ISplashContract.IPresenter {
+public class SplashPresenter extends BaseMvpPresenter<ISplashContract.IView> implements ISplashContract.IPresenter {
 
     // 定时器
     private CountDownTimer countDownTimer;
@@ -22,12 +22,6 @@ public class SplashPresenter extends BaseMvpPresenter<ISplashContract.IView,Spla
     public SplashPresenter(ISplashContract.IView view) {
         super(view);
     }
-
-    @Override
-    public SplashModel getModelInstance() {
-        return null;
-    }
-
 
     @Override
     protected ISplashContract.IView getEmptyView() {

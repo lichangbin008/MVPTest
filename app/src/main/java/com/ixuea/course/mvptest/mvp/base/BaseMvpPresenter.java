@@ -10,16 +10,11 @@ import com.ixuea.course.mvptest.mvp.presenter.ILifeCircleMvpPresenter;
 /**
  * P层中间类
  */
-public abstract class BaseMvpPresenter<T extends IMvpView,M extends BaseModel> extends ILifeCircleMvpPresenter<T> {
-
-    public M mModel;
+public abstract class BaseMvpPresenter<T extends IMvpView> extends ILifeCircleMvpPresenter<T> {
 
     public BaseMvpPresenter(T view){
         super(view);
-        this.mModel = getModelInstance();
     }
-
-    public abstract M getModelInstance();
 
     @Override
     public void onCreate(Bundle savedInstanceState, Intent intent, Bundle getArguments) {
