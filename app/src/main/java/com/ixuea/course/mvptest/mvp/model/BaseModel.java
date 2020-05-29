@@ -1,6 +1,5 @@
 package com.ixuea.course.mvptest.mvp.model;
 
-import com.ixuea.course.mvptest.mvp.IMvpView;
 import com.ixuea.course.mvptest.mvp.base.BaseMvpPresenter;
 
 /**
